@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TitleComponent } from '../shared/typography/title/title.component';
 
 @Component({
   selector: 'app-first',
   standalone: true,
-  imports: [],
+  imports: [TitleComponent],
   templateUrl: './first.component.html',
   styleUrl: './first.component.scss',
 })
