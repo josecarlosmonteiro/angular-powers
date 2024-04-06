@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-power-details',
+  selector: 'power-details',
   standalone: true,
   imports: [],
   templateUrl: './power-details.component.html',

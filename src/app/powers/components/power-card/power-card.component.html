@@ -1,0 +1,16 @@
+<div class="flex flex-col gap-2 rounded shadow bg-gray-100">
+  <div
+    class="p-2 flex items-center gap-2 bg-gray-200 text-lg font-semibold rounded-t"
+  >
+    <span class="text-xs font-bold">[{{ power.id }}]</span>
+    <span>{{ power.name }}</span>
+  </div>
+
+  <div class="px-2 mx-2 w-fit text-xs rounded-full {{ powerTypeColor }}">
+    {{ power.type }}
+  </div>
+
+  <div class="p-2 text-sm italic text-gray-400">
+    {{ power.description }}
+  </div>
+</div>

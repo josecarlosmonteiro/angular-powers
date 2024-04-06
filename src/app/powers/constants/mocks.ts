@@ -1,4 +1,4 @@
-import { Power } from '../app/powers/interfaces/power';
+import { Power } from '../interfaces/power';
 
 export const MOCK_POWERS: Power[] = [
   {
