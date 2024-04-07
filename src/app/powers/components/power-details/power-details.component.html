@@ -1,1 +1,6 @@
-<p>power-details works!</p>
+<div *ngIf="!!selectedPower" class="p-4 rounded shadow bg-gray-100">
+  <h2 class="text-xl"> {{ selectedPower.id }} - {{ selectedPower.name }}</h2>
+  <hr>
+
+  <p class="mt-2 text-gray-500 italic">{{ selectedPower.description }}</p>
+</div>
