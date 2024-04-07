@@ -3,6 +3,8 @@
     <power-card
       [power]="power"
       [powerTypeColor]="getPowerColor(power.type)"
+      [isSelected]="selectedPower?.id === power.id"
+      (click)="selectPower(power)"
     ></power-card>
   </div>
 </div>

@@ -5,8 +5,13 @@
   <br />
 
   <div class="w-[80vw] mx-auto">
-    <powers-list></powers-list>
+    <powers-list
+      [powersList]="powerState.getPowers()"
+      [selectedPower]="powerState.selectedPower"
+      (onClickPower)="powerState.selectPower($event)"
+    />
     <br />
-    <power-details></power-details>
+
+    <power-details [selectedPower]="powerState.selectedPower" />
   </div>
 </main>

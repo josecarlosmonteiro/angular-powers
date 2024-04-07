@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Power } from '../../interfaces/power';
 
 @Component({
@@ -11,4 +11,5 @@ import { Power } from '../../interfaces/power';
 export class PowerCardComponent {
   @Input() power!: Power;
   @Input() powerTypeColor: string = '';
+  @Input() isSelected: boolean = false;
 }

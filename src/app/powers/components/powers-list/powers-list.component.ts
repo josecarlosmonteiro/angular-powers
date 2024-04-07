@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Power } from '../../interfaces/power';
 import { CommonModule } from '@angular/common';
-import { PowersService } from '../../services/powers.service';
 import { powerTypeColorsMap } from '../../constants/powerTypes';
 import { PowerCardComponent } from '../power-card/power-card.component';
 
@@ -13,14 +12,17 @@ import { PowerCardComponent } from '../power-card/power-card.component';
   styleUrl: './powers-list.component.scss',
 })
 export class PowersListComponent {
-  powersList: Power[] = [];
+  @Input() powersList: Power[] = [];
+  @Input() selectedPower?: Power;
+  @Output() onClickPower: EventEmitter<Power> = new EventEmitter();
+
   powerColorsMap = powerTypeColorsMap;
 
-  constructor(private powersService: PowersService) {
-    this.powersList = this.powersService.getPowers();
+  getPowerColor(type: string): string {
+    return this.powerColorsMap[type.toLowerCase()];
   }
 
-  getPowerColor(type: string): string {
-    return `bg-[${this.powerColorsMap[type.toLowerCase()]}]`;
+  selectPower(power: Power) {
+    this.onClickPower.emit(power);
   }
 }
