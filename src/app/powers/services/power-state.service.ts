@@ -18,7 +18,6 @@ export class PowerStateService {
   }
 
   selectPower(power: Power) {
-    // console.log(power);
     this.selectedPower = power;
   }
 
